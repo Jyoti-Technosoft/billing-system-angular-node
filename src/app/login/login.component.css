@@ -1,0 +1,25 @@
+
+
+.main-div mat-card {
+    padding: 0px;
+}
+
+.main-div {
+    background-color: black;
+}
+
+.login-form {
+    padding: 20px;
+}
+
+.forgot-password{
+    padding-left: 0px;
+}
+
+.aLink {
+    float: right;
+    padding-left: 160px;
+    text-decoration: none;
+    color: blue;
+    padding-bottom: 20px;
+}
