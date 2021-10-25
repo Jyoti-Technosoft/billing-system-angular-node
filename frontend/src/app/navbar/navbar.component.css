@@ -14,3 +14,10 @@
     transition: 0.2s linear;
     top: -50px;
 }
+.fixed-header {
+    position: sticky;
+    top: 0; 
+    left: 0;
+    z-index: 2;
+    width: 100%  !important;
+}
