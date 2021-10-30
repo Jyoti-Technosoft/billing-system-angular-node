@@ -5,3 +5,7 @@
 .spacer{
   flex: 1 1 auto;
 }
+.mat-toolbar-row, .mat-toolbar-single-row {
+  background-color: skyblue;
+  color: black;
+}

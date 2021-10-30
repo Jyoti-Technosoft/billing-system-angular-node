@@ -1,20 +1,24 @@
-<mat-tool-bar color="primary">
- <span> <a mat-button routerLink="/" routerLinkActive="active">Home</a></span>
- 
-  <ng-container *ngIf="!auth.isAuthenticated()">
-    <a mat-button routerLink="/auth/login" routerLinkActive="active">
-      Login
-    </a>
-    <a mat-button routerLink="/auth/register">
-      Register
-    </a>
-  </ng-container>
-  <ng-container *ngIf="auth.isAuthenticated()">
-    <a>
-      {{ auth.getUsername() }}
-    </a>
-    <a mat-button class="nav-link pointer" (click)="logout()">
-      Logout
-    </a>
-  </ng-container>
-</mat-tool-bar>
+<nav>
+  <mat-tool-bar color="primary">
+    <mat-toolbar-row>
+      <span> <a mat-button routerLink="/" routerLinkActive="active">Home</a></span>
+      <div class="spacer"></div>
+      <ng-container *ngIf="!auth.isAuthenticated()">
+        <a mat-button routerLink="/auth/login" routerLinkActive="active">
+          Login
+        </a>
+        <a mat-button routerLink="/auth/register">
+          Register
+        </a>
+      </ng-container>
+      <ng-container *ngIf="auth.isAuthenticated()">
+        <a>
+          {{ auth.getUsername() }}
+        </a>
+        <a mat-button class="nav-link pointer" (click)="logout()">
+          Logout
+        </a>
+      </ng-container>
+    </mat-toolbar-row>
+  </mat-tool-bar>
+</nav>
