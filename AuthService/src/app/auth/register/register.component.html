@@ -1,0 +1,50 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+  <mat-card fxFlex="25">
+    <mat-toolbar color="accent">User Registration</mat-toolbar>
+    <form #registerForm="ngForm" fxLayoutAlign="stretch" fxLayout="column">
+      <div *ngIf="errors.length > 0">
+        <ul *ngFor="let error of errors">
+          <li>{{ error }}</li>
+        </ul>
+      </div>
+      <mat-form-field class="full-width">
+        <input type="text" class="form-control" [(ngModel)]="formData.username" name="username" #username="ngModel"
+          placeholder="Username" matInput required>
+        <div *ngIf="username.invalid && (username.dirty || username.touched)">
+          <mat-error *ngIf="username.errors.required">
+            Username is required
+          </mat-error>
+        </div>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input type="email" class="form-control" [(ngModel)]="formData.email" name="email" #email="ngModel"
+          placeholder="Email" matInput required>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)">
+          <mat-error *ngIf="email.errors.required">
+            Email is required
+          </mat-error>
+        </div>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input type="password" class="form-control" [(ngModel)]="formData.password" #password="ngModel" name="password"
+          placeholder="Password" matInput required>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)">
+          <mat-error *ngIf="password.errors.required">
+            Password is required
+          </mat-error>
+        </div>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input type="password" class="form-control" [(ngModel)]="formData.passwordConfirmation"
+          #passwordConfirmation="ngModel" name="passwordConfirmation" placeholder="Confirm Password" matInput required>
+        <div *ngIf="passwordConfirmation.invalid && (passwordConfirmation.dirty || passwordConfirmation.touched)">
+          <mat-error *ngIf="passwordConfirmation.errors.required">
+            Confirm Password is required
+          </mat-error>
+        </div>
+      </mat-form-field>
+      <button (click)="register()" color="primary" mat-raised-button type="submit"
+        [disabled]="!registerForm.form.valid">Register</button>
+    </form>
+  </mat-card>
+</div>
