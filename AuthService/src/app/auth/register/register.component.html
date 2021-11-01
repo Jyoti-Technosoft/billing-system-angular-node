@@ -12,7 +12,7 @@
           placeholder="Username" matInput required>
         <div *ngIf="username.invalid && (username.dirty || username.touched)">
           <mat-error *ngIf="username.errors.required">
-            Username is required
+            <!-- Username is required -->
           </mat-error>
         </div>
       </mat-form-field>
@@ -21,7 +21,7 @@
           placeholder="Email" matInput required>
         <div *ngIf="email.invalid && (email.dirty || email.touched)">
           <mat-error *ngIf="email.errors.required">
-            Email is required
+            <!-- Email is required -->
           </mat-error>
         </div>
       </mat-form-field>
@@ -30,7 +30,7 @@
           placeholder="Password" matInput required>
         <div *ngIf="password.invalid && (password.dirty || password.touched)">
           <mat-error *ngIf="password.errors.required">
-            Password is required
+            <!-- Password is required -->
           </mat-error>
         </div>
       </mat-form-field>
@@ -39,7 +39,7 @@
           #passwordConfirmation="ngModel" name="passwordConfirmation" placeholder="Confirm Password" matInput required>
         <div *ngIf="passwordConfirmation.invalid && (passwordConfirmation.dirty || passwordConfirmation.touched)">
           <mat-error *ngIf="passwordConfirmation.errors.required">
-            Confirm Password is required
+            <!-- Confirm Password is required -->
           </mat-error>
         </div>
       </mat-form-field>

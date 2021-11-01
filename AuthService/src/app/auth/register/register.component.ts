@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register(): void {
+    console.log("Registration Done...")
     this.errors = [];
     this.auth.register(this.formData)
       .subscribe(() => {

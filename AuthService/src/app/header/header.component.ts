@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
+    console.log("Logout Successfully...")
     this.auth.logout();
     this.router.navigate(['/auth/login'], { queryParams: { loggedOut: 'success' } });
   }

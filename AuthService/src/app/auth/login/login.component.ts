@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
+    console.log("Login Successfully...")
     this.errors = [];
     this.auth.login(this.loginForm.value)
       .subscribe((token) => {

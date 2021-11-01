@@ -6,7 +6,7 @@
         <input formControlName="email" matInput placeholder="Username" matInput required>
         <div *ngIf="isValidInput('email')">
           <mat-error *ngIf="loginForm.controls['email'].errors.required">
-            Email is required.
+            <!-- Email is required. -->
           </mat-error>
           <mat-error *ngIf="loginForm.controls['email'].errors.pattern">
             Must be a valid email format.
@@ -17,7 +17,7 @@
         <input type="password" formControlName="password" placeholder="Password" matInput required>
         <div *ngIf="isValidInput('password')">
           <mat-error *ngIf="loginForm.controls['password'].errors.required">
-            Password is required.
+            <!-- Password is required. -->
           </mat-error>
         </div>
       </mat-form-field>
